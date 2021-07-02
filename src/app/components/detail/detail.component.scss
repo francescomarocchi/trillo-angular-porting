@@ -1,0 +1,151 @@
+.detail {
+  font-size: 1.4rem;
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+}
+
+.description {
+  font-size: 1.4rem;
+  background-color: white;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+}
+
+.user-reviews {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paragraph {
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      margin-right: 0.7rem;
+
+      // Older browsers
+      // background-image: url(../img/chevron-thin-right.svg);
+      // background-size: cover;
+
+      // Newer browsers
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+    }
+  }
+}
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+
+  display: flex;
+  align-items: center;
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__friends {
+
+  }
+
+  &__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border: 3px solid #fff;
+    border-radius: 50%;
+
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
+  }
+}
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+
+  &__text { 
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &-box { 
+      margin-right: auto; 
+    }
+
+    &-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: .4rem;
+    }
+
+    &-date {
+      font-size: 1rem;
+      color: var(--color-grey-dark-3);
+    }
+  }
+  
+  &__photo {
+    border-radius: 50%;
+    height: 4.5rem;
+    width: 4.5rem;
+    margin-right: 1.5rem;
+  }
+
+  &__rating {
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-weight: 100;
+  }
+
+  &::before {
+    content: '\201C';
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    line-height: 1;
+    font-size: 20rem;
+    color: var(--color-grey-light-2);
+    font-family: sans-serif;
+  }
+}
